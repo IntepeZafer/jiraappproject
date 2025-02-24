@@ -1,18 +1,35 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div v-if="tasks.length">
+    <div v-for="task in tasks" :key="task.id">
+      <SingleTasks :task="task" />
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import SingleTasks from '../components/SingleTasksCompenent/SingleTasks.vue'
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+    SingleTasks : SingleTasks
+  },
+  data(){
+    return {
+      tasks : []
+    }
+  },
+  mounted() {
+    fetch('http://localhost:3000/tasks')
+    .then((res) => {
+      return res.json()
+    })
+    .then((data) => {
+      this.tasks = data
+      console.log(this.tasks)
+    })
+    .catch((err) => {
+      console.log(err)
+    })
   }
 }
 </script>
