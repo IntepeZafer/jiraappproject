@@ -1,11 +1,11 @@
 <template>
-    <div class="task">
+    <div class="task" :class="{complete: task.complete}">
         <div class="actions">
             <h1 @click="toggleDetails">{{task.title}}</h1>
             <div class="icons">
                 <span @click="deleteTask" class="material-symbols-outlined">delete</span>
                 <span class="material-symbols-outlined">edit</span>
-                <span @click="doneTask" class="material-symbols-outlined">done</span>
+                <span @click="doneTask" class="material-symbols-outlined done">done</span>
             </div>
         </div>
         <div class="details" v-if="showDetails">

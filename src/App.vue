@@ -62,7 +62,15 @@ body{
   padding: .5rem;
   border-radius: .3rem;
   font-weight: 100;
-  height: 8vh;
+  height: 7vh;
   margin-left: 1rem;
+}
+.task.complete{
+  border-left: 10px solid green;
+  transition: 1s all ease-in-out;
+}
+.task.complete .done , .task.complete h1{
+  color: green;
+  transition: 1s all ease-in-out;
 }
 </style>
