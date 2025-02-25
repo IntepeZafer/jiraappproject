@@ -1,7 +1,7 @@
 <template>
   <div v-if="tasks.length">
     <div v-for="task in tasks" :key="task.id">
-      <SingleTasks :task="task" />
+      <SingleTasks :task="task" @delete="handleDeleteTask"/>
     </div>
   </div>
 </template>
@@ -25,11 +25,18 @@ export default {
     })
     .then((data) => {
       this.tasks = data
-      console.log(this.tasks)
+      console.log(data)
     })
     .catch((err) => {
       console.log(err)
     })
+  },
+  methods: {
+    handleDeleteTask(id) {
+     this.tasks = this.tasks.filter((task) => {
+        return task.id !== id
+      })
+    }
   }
 }
 </script>

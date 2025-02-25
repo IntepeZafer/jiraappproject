@@ -62,7 +62,7 @@ body{
   padding: .5rem;
   border-radius: .3rem;
   font-weight: 100;
-  height: 7vh;
+  height: 8vh;
   margin-left: 1rem;
 }
 </style>
