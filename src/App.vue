@@ -73,4 +73,41 @@ body{
   color: green;
   transition: 1s all ease-in-out;
 }
+form{
+  max-width: 30vw;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  margin-top: 1rem;
+  border-radius: .3rem;
+  font-weight: 100;
+  color: #fff;
+  transition: 1s all ease-in-out;
+}
+form input , form textarea{
+  padding: .5rem;
+  border-radius: .3rem;
+  border: none;
+  font-size: 1.1em;
+  font-weight: 100;
+  resize: none; 
+  outline: none;
+}
+form button{
+  padding: .5rem;
+  border-radius: .3rem;
+  border: none;
+  font-size: 1em;
+  font-weight: 100;
+  cursor: pointer;
+  background-color: #fff;
+  font-weight: 100;
+}
+form:hover{
+  background-color: rgba(0, 174, 255, 0.2);
+  color: black;
+}
 </style>

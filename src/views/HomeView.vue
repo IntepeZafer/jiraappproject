@@ -2,6 +2,7 @@
   <div v-if="tasks.length">
     <div v-for="task in tasks" :key="task.id">
       <SingleTasks :task="task" @delete="handleDeleteTask" @complete="handleCompleteTask"/>
+      <AddTasks/>
     </div>
   </div>
 </template>
