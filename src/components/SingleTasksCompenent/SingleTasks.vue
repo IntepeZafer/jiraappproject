@@ -5,7 +5,7 @@
             <div class="icons">
                 <span @click="deleteTask" class="material-symbols-outlined">delete</span>
                 <span class="material-symbols-outlined">edit</span>
-                <span class="material-symbols-outlined">done</span>
+                <span @click="doneTask" class="material-symbols-outlined">done</span>
             </div>
         </div>
         <div class="details" v-if="showDetails">
@@ -36,6 +36,21 @@ export default {
                 method: 'DELETE'
             })
             .then(() => this.$emit('delete', this.task.id))
+            .catch((err) => console.log(err))
+        },
+        doneTask(){
+            fetch(this.uri + this.task.id, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    title: this.task.title,
+                    details: this.task.details,
+                    complete: !this.task.complete
+                })
+            })
+            .then(() => this.$emit('complete', this.task.id))
             .catch((err) => console.log(err))
         }
     }

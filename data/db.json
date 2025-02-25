@@ -1,23 +1,22 @@
 {
-  "tasks": 
-  [
+  "tasks": [
     {
-      "id" : 1,
-      "title" : "Backend İşlemleri",
-      "details" : "Backend İşlemlerinin Yapılması",
-      "complete" : false
+      "title": "Backend İşlemleri",
+      "details": "Backend İşlemlerinin Yapılması",
+      "complete": false,
+      "id": "1"
     },
     {
-      "id" : 2,
-      "title" : "Frontend İşlemleri",
-      "details" : "Frontend İşlemlerinin Yapılması",
-      "complete" : false
+      "title": "Frontend İşlemleri",
+      "details": "Frontend İşlemlerinin Yapılması",
+      "complete": false,
+      "id": "2"
     },
     {
-      "id" : 3,
-      "title" : "Data Api İşlemleri",
-      "details" : "Data Api İşlemlerinin Yapılması",
-      "complete" : false
+      "title": "Data Api İşlemleri",
+      "details": "Data Api İşlemlerinin Yapılması",
+      "complete": false,
+      "id": "3"
     }
   ]
 }
