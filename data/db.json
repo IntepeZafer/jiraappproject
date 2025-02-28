@@ -1,27 +1,15 @@
 {
   "tasks": [
     {
-      "title": "Backend İşlemleri",
-      "details": "Backend İşlemlerinin Yapılması",
-      "complete": true,
-      "id": "1"
-    },
-    {
       "title": "Frontend İşlemleri",
-      "details": "Frontend İşlemlerinin Yapılması",
-      "complete": false,
+      "details": "Frontend İşlemlerinin Yapılması1",
       "id": "2"
     },
     {
-      "title": "Data Api İşlemleri",
-      "details": "Data Api İşlemlerinin Yapılması",
+      "title": "Data Api İşlemleriasdasd",
+      "details": "Yeni Veri Eklendi",
       "complete": false,
       "id": "3"
-    },
-    {
-      "id": 42001,
-      "title": "asd",
-      "details": "asd"
     }
   ]
 }

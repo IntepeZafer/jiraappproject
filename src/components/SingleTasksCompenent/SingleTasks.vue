@@ -4,7 +4,9 @@
             <h1 @click="toggleDetails">{{task.title}}</h1>
             <div class="icons">
                 <span @click="deleteTask" class="material-symbols-outlined">delete</span>
-                <span class="material-symbols-outlined">edit</span>
+                <router-link :to="{name: 'edittask', params: {id: task.id}}">
+                    <span class="material-symbols-outlined">edit</span>
+                </router-link>
                 <span @click="doneTask" class="material-symbols-outlined done">done</span>
             </div>
         </div>
@@ -52,7 +54,7 @@ export default {
             })
             .then(() => this.$emit('complete', this.task.id))
             .catch((err) => console.log(err))
-        }
+        },
     }
 }
 </script>

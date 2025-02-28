@@ -1,6 +1,7 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
+    <router-link to="/">Yapılacaklar Listesi</router-link> |
+    <router-link to="/addtask">Yeni Ekle</router-link>
   </nav>
   <router-view/>
 </template>
@@ -18,6 +19,7 @@
   max-width: 50vw;
   width: 100%;
   margin: 0 auto;
+  padding: 1rem;
 }
 body{
   background-color: ghostwhite;
@@ -109,5 +111,12 @@ form button{
 form:hover{
   background-color: rgba(0, 174, 255, 0.2);
   color: black;
+}
+a{
+  text-decoration: none;
+  font-size: 1.1em;
+  letter-spacing: .0625rem;
+  padding: .5rem;
+  border-radius: .3rem;
 }
 </style>
